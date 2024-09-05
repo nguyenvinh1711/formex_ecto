@@ -36,6 +36,8 @@ defmodule Formex.Ecto.Mixfile do
       {:formex, git: "git@github.com:nguyenvinh1711/formex.git", branch: "new-master"}
     ]
 
+    deps
+
     # if !System.get_env("FORMEX_DEV") do
     #   deps ++ [{:formex, git: "git@github.com:nguyenvinh1711/formex.git"}]
     #   # deps ++ [{:formex, path: "../formex"}] # for tests with formex debugging
