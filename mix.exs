@@ -32,15 +32,16 @@ defmodule Formex.Ecto.Mixfile do
       {:jason, "~> 1.1", only: [:dev, :test]},
       {:phoenix, "~> 1.3.2", only: [:dev, :test]},
       {:phoenix_ecto, "~> 4.0", only: [:dev, :test]},
-      {:credo, "~> 0.9", only: [:dev, :test], runtime: false}
+      {:credo, "~> 0.9", only: [:dev, :test], runtime: false},
+      {:formex, git: "git@github.com:nguyenvinh1711/formex.git", branch: "new-master"}
     ]
 
-    if !System.get_env("FORMEX_DEV") do
-      deps ++ [{:formex, git: "git@github.com:nguyenvinh1711/formex.git"}]
-      # deps ++ [{:formex, path: "../formex"}] # for tests with formex debugging
-    else
-      deps
-    end
+    # if !System.get_env("FORMEX_DEV") do
+    #   deps ++ [{:formex, git: "git@github.com:nguyenvinh1711/formex.git"}]
+    #   # deps ++ [{:formex, path: "../formex"}] # for tests with formex debugging
+    # else
+    #   deps
+    # end
   end
 
   defp description do
